@@ -4,11 +4,12 @@ let employees = [
     {name: "Mackenzie Ricer", hourlyRate: 17, hoursWorked: 46},
     {name: "Cassandra Jones", hourlyRate: 15, hoursWorked: 55},
     {name: "Luke Skywalker", hourlyRate: 20, hoursWorked: 47}
-]
+];
+console.log("Step 2: Employees created:", employees);
 
-function calculateBasePay (rate, hours) {
+function calculateBasePay(rate, hours) {
     let regularHours = Math.min(hours, 40);
-    let pay = regularHours * rate;
-    console.log(`Step 3: Base pay for rate $${rate}/hr and ${hours} hrs = $${pay.toFixed(2)}`);
-    return pay;
+    return regularHours * rate;
 }
+
+
