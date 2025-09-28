@@ -7,12 +7,8 @@ let employees = [
 ]
 
 function calculateBasePay (rate, hours) {
-    if (hoursWorked > 40) {
-        let hours = hoursWorked - 40
-    } else {
-        let hours = 0 
-    }
-    return rate*(hoursWorked - hours)}
-
-let basePay = calculateBasePay (employees.hourlyRate, employees.hoursWorked);
-console.log(basePay);
+    let regularHours = Math.min(hours, 40);
+    let pay = regularHours * rate;
+    console.log(`Step 3: Base pay for rate $${rate}/hr and ${hours} hrs = $${pay.toFixed(2)}`);
+    return pay;
+}
