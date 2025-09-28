@@ -5,11 +5,22 @@ let employees = [
     {name: "Cassandra Jones", hourlyRate: 15, hoursWorked: 55},
     {name: "Luke Skywalker", hourlyRate: 20, hoursWorked: 47}
 ];
-console.log("Step 2: Employees created:", employees);
 
 function calculateBasePay(rate, hours) {
-    let regularHours = Math.min(hours, 40);
-    return regularHours * rate;
+    if (employees.hoursWorked > 40) {
+        let hours = employees.hoursWorked - 40
+    } else {
+        let hours = 0 }
+    return employees.hourlyRate * (employees.hoursWorked - hours)
+};
+
+function calculateOvertimePay(rate, hours) {
+    if (hoursWorked > 40) {
+        let hours = hoursWorked - 40
+    } else {
+        let hours = 0
+    }
+    return (hourlyRate * 1.5) * hours
 }
 
 
